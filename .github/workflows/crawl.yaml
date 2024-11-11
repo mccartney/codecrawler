@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Crawl
-      - run: |
+        run: |
           curl -L \
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: Bearer $(cat /Volumes/Encrypted/2024-11-11-github-token-codecrawler)" \
