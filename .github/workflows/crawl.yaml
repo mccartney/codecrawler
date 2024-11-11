@@ -15,7 +15,5 @@ jobs:
           "https://api.github.com/search/code?q=language:hcl" >response
   
           cat response | jq -r '.items[] | .git_url' | while read URL; do
-           curl -q $URL -o a.tf
-           cat a.tf | jq -r .content | base64 -d | head -n 1
+           curl -q $URL | jq -r .content | base64 -d | head -n 1
           done
-          
